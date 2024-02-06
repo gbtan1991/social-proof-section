@@ -32,15 +32,15 @@ const Testimonials = () => {
         
         <div className='flex flex-col gap-3 text-white pb-20 font-theme'>
             {comments.map((comment, index) => (
-                <div key={index} className='flex flex-col bg-veryDarkMagenta p-8 text-sm rounded-xl gap-7'>
+                <div key={index} className='flex flex-col bg-veryDarkMagenta p-8 text-sm rounded-xl gap-6'>
                      <div className='flex flex-row gap-5 '>
                      <img src={comment.avatar} alt="avatar" className='rounded-full w-10 h-10' />
                     <div>
                     <h3 className='font-bold'>{comment.name}</h3>
-                    <h4>{comment.profile}</h4>
+                    <h4 className='text-softPink '>{comment.profile}</h4>
                     </div>
                     </div>
-                    <p className='before:content-["] after:contents-["]'>{comment.comment }</p>
+                    <p className='px-5'>{comment.comment }</p>
                   {console.log(comment.avatar)}
                 </div>
             ))}
