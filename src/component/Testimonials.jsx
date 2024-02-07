@@ -30,9 +30,9 @@ const Testimonials = () => {
 
     return (
         
-        <div className='flex flex-col gap-3 text-white pb-20 font-theme'>
+        <div className='flex flex-col lg:flex-row gap-3 lg:gap-7 text-white pb-20 font-theme lg:px-[10%]'>
             {comments.map((comment, index) => (
-                <div key={index} className='flex flex-col bg-veryDarkMagenta p-8 text-sm rounded-xl gap-6'>
+                <div key={index} className={`flex flex-col bg-veryDarkMagenta p-8 text-sm rounded-xl lg:rounded-lg gap-6  ${index === 0 ? 'lg:h-5/6 lg:w-5/6' : index === 1 ? 'lg:h-5/6 lg:w-5/6 lg:mt-8': 'lg:h-5/6 lg:w-5/6 lg:mt-16'}`}>
                      <div className='flex flex-row gap-5 '>
                      <img src={comment.avatar} alt="avatar" className='rounded-full w-10 h-10' />
                     <div>
@@ -41,7 +41,7 @@ const Testimonials = () => {
                     </div>
                     </div>
                     <p className='px-5'>{comment.comment }</p>
-                  {console.log(comment.avatar)}
+                  
                 </div>
             ))}
 
